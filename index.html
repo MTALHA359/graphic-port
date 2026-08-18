@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Saad — Graphic Designer &amp; Node.js Developer | Portfolio</title>
+    <meta name="description" content="Official portfolio of M Saad. 3+ years of experience blending world-class Graphic Design, Brand Architecture, UI/UX with high-performance Node.js backend engineering. Former Nexsoll LLC &amp; Digital Solutions.">
+    <meta name="keywords" content="M Saad, Graphic Designer, Node.js Developer, Portfolio, Nexsoll LLC, Digital Solutions, Brand Identity, UI UX, Web Development">
+    <meta name="author" content="M Saad">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="M Saad — Graphic Designer &amp; Node.js Developer">
+    <meta property="og:description" content="3+ Years of crafting standout visual identities, digital products, and robust Node.js backend systems.">
+    <meta property="og:image" content="assets/project_branding.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Custom Interactive Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Background Noise & Ambient Glow Gradients -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Navigation Bar -->
+    <header class="site-header" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="M Saad Home">
+                <span class="logo-mark">MS</span>
+                <span class="logo-text">Saad<span class="accent-dot">.</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#portfolio" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills &amp; Stack</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#reviews" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link nav-link-btn">Let's Talk</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-indicator"></span>
+                        <span>Available for Freelance &amp; Full-time Roles</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Visual Designer <br>
+                        <span class="text-gradient">&amp; Node.js Developer</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        I am <strong>M Saad</strong>, bringing <strong>3+ years</strong> of multidisciplinary expertise. I bridge the gap between arresting visual aesthetics, brand storytelling, and resilient, high-speed backend architecture.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary btn-lg">
+                            <span>Explore Portfolio</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-lg">
+                            <span>Get in Touch</span>
+                        </a>
+                        <button class="btn btn-ghost btn-lg" id="downloadCvBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span>Resume</span>
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-num" data-count="3">3+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-count="120">120+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-count="45">45+</span>
+                            <span class="stat-label">Satisfied Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame-wrapper">
+                        <div class="image-glass-card">
+                            <img src="assets/hero_saad.jpg" alt="M Saad - Graphic Designer and Node.js Developer" class="hero-avatar-img">
+                            
+                            <!-- Floating Interactive Badges -->
+                            <div class="floating-badge badge-top-right">
+                                <div class="badge-icon icon-design">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                                </div>
+                                <div>
+                                    <div class="badge-title">Creative Direction</div>
+                                    <div class="badge-sub">Branding &amp; UI/UX</div>
+                                </div>
+                            </div>
+
+                            <div class="floating-badge badge-bottom-left">
+                                <div class="badge-icon icon-dev">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                </div>
+                                <div>
+                                    <div class="badge-title">Backend Architecture</div>
+                                    <div class="badge-sub">Node.js, Express &amp; APIs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client / Trust Ticker -->
+            <div class="brand-ticker">
+                <div class="container">
+                    <p class="ticker-label">EXPERIENCE WITH INDUSTRY TEAMS &amp; PLATFORMS</p>
+                    <div class="ticker-track">
+                        <div class="ticker-item"><span class="ticker-dot"></span>Nexsoll LLC</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Digital Solutions</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Adobe Creative Cloud</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Figma Design Systems</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Node.js Runtime</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>RESTful Microservices</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Nexsoll LLC</div>
+                        <div class="ticker-item"><span class="ticker-dot"></span>Digital Solutions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Dual DNA Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Where Aesthetic Vision Meets High-Performance Code</h2>
+                    <p class="section-desc">
+                        Most creatives stop at visual layout; most engineers stop at raw code. I combine both worlds to design identities that captivate and build backend systems that scale effortlessly.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3 class="feature-title">Graphic &amp; Brand Strategy</h3>
+                        <p class="feature-text">
+                            Crafting memorable brand identities, luxury packaging, social advertising collateral, typography hierarchies, and intuitive UI/UX workflows that convert visitors into loyal customers.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Brand Guidelines &amp; Logo Systems</li>
+                            <li>Social Media &amp; Marketing Graphics</li>
+                            <li>Print &amp; Packaging Solutions</li>
+                            <li>Figma Prototyping &amp; Design Systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-card feature-card">
+                        <div class="feature-icon dev-icon-color">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                        </div>
+                        <h3 class="feature-title">Node.js Backend Engineering</h3>
+                        <p class="feature-text">
+                            Developing scalable REST APIs, microservices, authentication architectures, database schemas (MongoDB, SQL), and real-time event-driven infrastructure.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Node.js / Express.js Core APIs</li>
+                            <li>JWT &amp; OAuth Security Protocols</li>
+                            <li>Database Integration (MongoDB / SQL)</li>
+                            <li>Full-Stack Web App Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Career Milestones</span>
+                    <h2 class="section-title">3 Years of Proven Industry Experience</h2>
+                    <p class="section-desc">
+                        A track record of designing high-converting visual collateral and developing backend systems at fast-paced tech and creative firms.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Experience 1: Nexsoll LLC -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 — Present</div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Senior Graphic Designer &amp; Tech Associate</h3>
+                                    <span class="timeline-company">Nexsoll LLC</span>
+                                </div>
+                                <span class="badge-role">Full-Time</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Led visual branding campaigns, creative collateral for international enterprise clients, and collaborated with engineering teams to optimize asset pipelines and implement Node.js API endpoints for internal creative portals.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Brand Systems</span>
+                                <span class="tag">UI/UX Assets</span>
+                                <span class="tag">Node.js Services</span>
+                                <span class="tag">Adobe Suite</span>
+                                <span class="tag">Creative Direction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2: Digital Solutions -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 — 2024</div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Graphic Designer &amp; Visual Strategist</h3>
+                                    <span class="timeline-company">Digital Solutions</span>
+                                </div>
+                                <span class="badge-role">Professional</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Designed over 80+ marketing assets, brand stylebooks, promotional social media designs, web banners, and automated visual asset exports using custom Node.js script automation.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Adobe Photoshop</span>
+                                <span class="tag">Illustrator</span>
+                                <span class="tag">Social Campaigns</span>
+                                <span class="tag">Visual Identity</span>
+                                <span class="tag">Automation Scripts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3: Freelance & Independent Projects -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 — 2023</div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Freelance Designer &amp; Web Developer</h3>
+                                    <span class="timeline-company">Global Independent Clients</span>
+                                </div>
+                                <span class="badge-role">Contract</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Delivered comprehensive branding identities, product packaging 3D mockups, and end-to-end fullstack websites with Node.js/Express backends for startups across e-commerce, fitness, and tech sectors.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Packaging</span>
+                                <span class="tag">Express.js</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Client Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section class="section portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header-row">
+                    <div>
+                        <span class="section-tag">Featured Works</span>
+                        <h2 class="section-title">Selected Projects &amp; Case Studies</h2>
+                    </div>
+
+                    <!-- Filter Controls -->
+                    <div class="filter-buttons" id="filterContainer">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="branding">Branding</button>
+                        <button class="filter-btn" data-filter="uiux">UI/UX &amp; Web</button>
+                        <button class="filter-btn" data-filter="packaging">Packaging</button>
+                        <button class="filter-btn" data-filter="backend">Node.js Backends</button>
+                        <button class="filter-btn" data-filter="marketing">Social &amp; Ads</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1: Aurelius Brand Identity -->
+                    <div class="project-card" data-category="branding" data-id="1">
+                        <div class="project-media">
+                            <img src="assets/project_branding.jpg" alt="Aurelius Luxury Brand Identity System" loading="lazy">
+                            <div class="project-overlay">
+                                <button class="btn btn-sm btn-light open-modal-btn" data-id="1">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-category">Brand Identity &amp; Print</div>
+                            <h3 class="project-title">Aurelius — Luxury Executive Identity &amp; Stationery</h3>
+                            <p class="project-summary">Comprehensive corporate brand architecture, gold foil typography, letterhead systems, and physical brand books.</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span>
+                                <span>Photoshop</span>
+                                <span>Print Production</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Apex FinTech UI/UX -->
+                    <div class="project-card" data-category="uiux" data-id="2">
+                        <div class="project-media">
+                            <img src="assets/project_uiux.jpg" alt="Apex Next-Gen Financial Dashboard UI/UX" loading="lazy">
+                            <div class="project-overlay">
+                                <button class="btn btn-sm btn-light open-modal-btn" data-id="2">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-category">UI/UX &amp; Product Design</div>
+                            <h3 class="project-title">Apex — Dark-Mode Financial Platform &amp; Mobile UI</h3>
+                            <p class="project-summary">Glassmorphism dashboard design with real-time portfolio analytics, crypto wallets, and interactive mobile companion app.</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Design System</span>
+                                <span>Wireframing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Noir Éclat Luxury Packaging -->
+                    <div class="project-card" data-category="packaging" data-id="3">
+                        <div class="project-media">
+                            <img src="assets/project_packaging.jpg" alt="Noir Éclat Luxury Skincare Packaging" loading="lazy">
+                            <div class="project-overlay">
+                                <button class="btn btn-sm btn-light open-modal-btn" data-id="3">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-category">Packaging &amp; 3D Render</div>
+                            <h3 class="project-title">Noir Éclat — Premium Cosmetic Serum Packaging</h3>
+                            <p class="project-summary">Matte black cosmetic bottle and box structure design featuring geometric art deco gold stamping and label engineering.</p>
+                            <div class="project-tech">
+                                <span>Packaging Design</span>
+                                <span>3D Rendering</span>
+                                <span>Vector Art</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Enterprise Node.js Microservices -->
+                    <div class="project-card" data-category="backend" data-id="4">
+                        <div class="project-media">
+                            <img src="assets/project_nodejs.jpg" alt="Node.js Microservices Architecture &amp; API Dashboard" loading="lazy">
+                            <div class="project-overlay">
+                                <button class="btn btn-sm btn-light open-modal-btn" data-id="4">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-category">Node.js &amp; Architecture</div>
+                            <h3 class="project-title">NexusFlow — Node.js Microservices &amp; Live API Gateway</h3>
+                            <p class="project-summary">High-throughput event-driven microservices architecture handling 15k req/sec with RabbitMQ, Redis caching, and JWT security.</p>
+                            <div class="project-tech">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Aether + Motion Social Campaign -->
+                    <div class="project-card" data-category="marketing" data-id="5">
+                        <div class="project-media">
+                            <img src="assets/project_social.jpg" alt="Aether Motion Sportswear Social Campaign" loading="lazy">
+                            <div class="project-overlay">
+                                <button class="btn btn-sm btn-light open-modal-btn" data-id="5">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-category">Social Media &amp; Advertising</div>
+                            <h3 class="project-title">Aether + Motion — Global Sportswear Launch Campaign</h3>
+                            <p class="project-summary">High-energy kinetic visual banners, interactive Instagram story templates, and digital billboard displays for athletic apparel.</p>
+                            <div class="project-tech">
+                                <span>Social Strategy</span>
+                                <span>Typography</span>
+                                <span>Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Arsenal Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Skills &amp; Toolkit</span>
+                    <h2 class="section-title">Technical Proficiencies &amp; Creative Mastery</h2>
+                    <p class="section-desc">
+                        A comprehensive matrix of specialized design software, typography skills, backend languages, and developer tools honed over 3 years.
+                    </p>
+                </div>
+
+                <div class="skills-dual-grid">
+                    <!-- Design Skills -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon design-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Visual Design &amp; Creative Arts</h3>
+                                <p>Brand systems, UI/UX, vector illustration &amp; print</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Adobe Photoshop (Photo Manipulation &amp; Collateral)</span>
+                                    <span class="skill-pct">95%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 95%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Adobe Illustrator (Logos, Vectors &amp; Print)</span>
+                                    <span class="skill-pct">92%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 92%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Figma (UI/UX Systems &amp; Interactive Prototypes)</span>
+                                    <span class="skill-pct">90%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Brand Identity Guidelines &amp; Typography</span>
+                                    <span class="skill-pct">94%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 94%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Social Media Creative Strategy &amp; Ads</span>
+                                    <span class="skill-pct">96%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 96%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Skills -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon dev-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+                            </div>
+                            <div>
+                                <h3>Backend &amp; Web Development</h3>
+                                <p>Node.js, APIs, databases &amp; web architecture</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Node.js Core &amp; Runtime Architecture</span>
+                                    <span class="skill-pct">90%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill dev-fill" style="width: 90%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Express.js &amp; RESTful API Engineering</span>
+                                    <span class="skill-pct">92%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill dev-fill" style="width: 92%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Database Architecture (MongoDB, Mongoose, SQL)</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill dev-fill" style="width: 85%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Authentication, JWT, Middleware &amp; Security</span>
+                                    <span class="skill-pct">88%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill dev-fill" style="width: 88%"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-meta">
+                                    <span>Fullstack Integration (HTML5/CSS3, JS ES6+, Git)</span>
+                                    <span class="skill-pct">92%</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill dev-fill" style="width: 92%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Badges Grid -->
+                <div class="software-badges">
+                    <span class="software-badge"><span class="badge-dot"></span>Photoshop</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Illustrator</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Figma</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Node.js</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Express.js</span>
+                    <span class="software-badge"><span class="badge-dot"></span>MongoDB</span>
+                    <span class="software-badge"><span class="badge-dot"></span>REST APIs</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Postman</span>
+                    <span class="software-badge"><span class="badge-dot"></span>Git &amp; GitHub</span>
+                    <span class="software-badge"><span class="badge-dot"></span>JSON / WebSockets</span>
+                    <span class="software-badge"><span class="badge-dot"></span>After Effects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services & Working Process -->
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What I Offer</span>
+                    <h2 class="section-title">End-to-End Creative &amp; Technical Services</h2>
+                    <p class="section-desc">
+                        Providing comprehensive digital solutions ranging from high-converting brand identities to production-ready Node.js systems.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-box">
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">Full Brand Identity Design</h3>
+                        <p class="service-desc">Complete visual branding systems including logo suites, typography rules, color palettes, stationery, and comprehensive brand books.</p>
+                        <div class="service-deliverables">
+                            <span>Vector Logo Suite</span>
+                            <span>Brand Guidelines</span>
+                            <span>Print-Ready Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">UI/UX &amp; Web Design</h3>
+                        <p class="service-desc">Modern, responsive, user-centered web and mobile app interfaces crafted in Figma with pixel-perfect attention to detail and design systems.</p>
+                        <div class="service-deliverables">
+                            <span>Wireframing &amp; Prototypes</span>
+                            <span>Design Systems</span>
+                            <span>Responsive Mobile Layouts</span>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Node.js API &amp; Backend Dev</h3>
+                        <p class="service-desc">Clean, maintainable, high-performance Node.js and Express backends, custom RESTful APIs, database modeling, and third-party integrations.</p>
+                        <div class="service-deliverables">
+                            <span>REST APIs</span>
+                            <span>Authentication &amp; Security</span>
+                            <span>Database Schemas</span>
+                        </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="service-number">04</div>
+                        <h3 class="service-title">Social Media &amp; Advertising</h3>
+                        <p class="service-desc">High-impact visual campaigns for Instagram, LinkedIn, Facebook, digital billboards, and display ads that drive brand engagement and sales.</p>
+                        <div class="service-deliverables">
+                            <span>Campaign Banners</span>
+                            <span>Story Templates</span>
+                            <span>Ad Creatives</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Client Praise -->
+        <section class="section reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Client Feedback</span>
+                    <h2 class="section-title">What Collaborators &amp; Clients Say</h2>
+                    <p class="section-desc">
+                        Honest endorsements from executives, project managers, and product owners I have worked with over the past 3 years.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-quote">
+                            "Saad possesses a rare combination of pure visual mastery and deep technical comprehension. At Nexsoll, his brand collaterals elevated our client presentations to an international standard."
+                        </p>
+                        <div class="reviewer-meta">
+                            <div class="reviewer-avatar">AS</div>
+                            <div>
+                                <div class="reviewer-name">Asad Shah</div>
+                                <div class="reviewer-role">Creative Lead, Nexsoll LLC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-quote">
+                            "Working with Saad at Digital Solutions was smooth and highly productive. He delivers graphics with supreme precision and helped automate multiple asset exports through custom Node scripts."
+                        </p>
+                        <div class="reviewer-meta">
+                            <div class="reviewer-avatar">RK</div>
+                            <div>
+                                <div class="reviewer-name">Rehan Khan</div>
+                                <div class="reviewer-role">Operations Manager, Digital Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-quote">
+                            "Saad designed our brand identity and built our backend API from the ground up. He understood both the business goals and the aesthetic demands effortlessly. 10/10 recommendation!"
+                        </p>
+                        <div class="reviewer-meta">
+                            <div class="reviewer-avatar">EL</div>
+                            <div>
+                                <div class="reviewer-name">Elena Lawson</div>
+                                <div class="reviewer-role">Founder, Aurelius London</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section & Interactive Inquiry Form -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-tag">Let's Build Something Exceptional</span>
+                        <h2 class="contact-headline">Have a project in mind? Let's discuss.</h2>
+                        <p class="contact-sub">
+                            Whether you need an iconic visual identity, UI/UX product overhaul, or a rock-solid Node.js backend infrastructure, I am ready to collaborate.
+                        </p>
+
+                        <div class="contact-cards">
+                            <a href="mailto:contact.msaad.design@gmail.com" class="contact-method-card">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">contact.msaad.design@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </div>
+                                <div>
+                                    <span class="contact-label">Availability &amp; Location</span>
+                                    <span class="contact-value">Available for Remote / Hybrid Work (UTC+5)</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="contact-label">WhatsApp &amp; Direct Line</span>
+                                    <span class="contact-value">+92 (300) 000-0000 (Available upon message)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Handles -->
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7h5v2h-5z"/><path d="M16 11.5c1.5 0 3 .5 3 2.5s-1.5 3-3 3c-1.5 0-3-1-3-3s1.5-2.5 3-2.5z"/><path d="M3 6h5c2 0 3.5 1 3.5 3 0 1-.5 2-1.5 2.5 1.5.5 2 1.5 2 3 0 2-1.5 3.5-4 3.5H3V6zm3.5 4.5h1.5c.8 0 1.5-.4 1.5-1.2 0-.8-.7-1.3-1.5-1.3H6.5v2.5zm0 5h1.8c.8 0 1.7-.4 1.7-1.5 0-1-.8-1.5-1.7-1.5H6.5v3z"/></svg>
+                                <span>Behance</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <h3 class="form-title">Send a Direct Message</h3>
+
+                            <div class="form-group">
+                                <label for="userName">Your Full Name</label>
+                                <input type="text" id="userName" name="name" placeholder="e.g. Alex Morgan" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userEmail">Your Work Email</label>
+                                <input type="email" id="userEmail" name="email" placeholder="e.g. alex@company.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Service Interested In</label>
+                                <select id="serviceType" name="service" required>
+                                    <option value="brand_identity">Brand Identity &amp; Graphic Design</option>
+                                    <option value="ui_ux">UI/UX &amp; Product Design</option>
+                                    <option value="nodejs_backend">Node.js API &amp; Backend Development</option>
+                                    <option value="social_ads">Social Media &amp; Advertising Campaigns</option>
+                                    <option value="full_stack">Full-Stack Design + Node.js Package</option>
+                                    <option value="other">Other Inquiry / Consultation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userBudget">Approximate Budget (Optional)</label>
+                                <select id="userBudget" name="budget">
+                                    <option value="under_500">&lt; $500</option>
+                                    <option value="500_1500" selected>$500 — $1,500</option>
+                                    <option value="1500_3000">$1,500 — $3,000</option>
+                                    <option value="3000_plus">$3,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userMessage">Project Details &amp; Objectives</label>
+                                <textarea id="userMessage" name="message" rows="4" placeholder="Tell me about your project goals, timeline, and requirements..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#hero" class="brand-logo">
+                    <span class="logo-mark">MS</span>
+                    <span class="logo-text">Saad<span class="accent-dot">.</span></span>
+                </a>
+                <p class="footer-copy">
+                    &copy; <span id="currentYear">2026</span> M Saad. 3+ Years Experience in Graphic Design &amp; Node.js Engineering. Crafted with high-contrast precision.
+                </p>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top" aria-label="Back to top">
+                    <span>Back to Top</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Case Study Modal -->
+    <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close Case Study Modal">&times;</button>
+            <div class="modal-body" id="modalContent">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Resume Modal / Preview -->
+    <div class="modal-backdrop" id="resumeModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card resume-modal-card">
+            <button class="modal-close" id="resumeCloseBtn" aria-label="Close Resume Modal">&times;</button>
+            <div class="resume-preview-wrapper" id="resumeContent">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
