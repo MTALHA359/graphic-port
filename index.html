@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M Saad — Graphic Designer &amp; Node.js Developer | Portfolio</title>
-    <meta name="description" content="Official portfolio of M Saad. 3+ years of experience blending world-class Graphic Design, Brand Architecture, UI/UX with high-performance Node.js backend engineering. Former Nexsoll LLC &amp; Digital Solutions.">
-    <meta name="keywords" content="M Saad, Graphic Designer, Node.js Developer, Portfolio, Nexsoll LLC, Digital Solutions, Brand Identity, UI UX, Web Development">
+    <meta name="description" content="Official portfolio of M Saad. 3+ years of experience blending world-class Graphic Design, Brand Architecture, UI/UX with high-performance Node.js backend engineering. 24-hour turnaround express sprints available.">
+    <meta name="keywords" content="M Saad, Graphic Designer, Node.js Developer, Portfolio, Nexsoll LLC, Digital Solutions, Brand Identity, UI UX, Web Development, 24h Express Delivery">
     <meta name="author" content="M Saad">
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="M Saad — Graphic Designer &amp; Node.js Developer">
-    <meta property="og:description" content="3+ Years of crafting standout visual identities, digital products, and robust Node.js backend systems.">
+    <meta property="og:description" content="3+ Years of crafting standout visual identities, digital products, and robust Node.js backend systems with guaranteed rapid execution.">
     <meta property="og:image" content="assets/project_branding.jpg">
 
     <!-- Google Fonts -->
@@ -21,13 +21,30 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "M Saad",
+      "jobTitle": "Graphic Designer & Node.js Developer",
+      "description": "3+ years experience in brand identity design, UI/UX systems, and Node.js microservices.",
+      "knowsAbout": ["Graphic Design", "Brand Architecture", "Node.js", "Express.js", "MongoDB", "UI/UX Design", "Figma"]
+    }
+    </script>
 </head>
 <body class="dark-theme">
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
     <!-- Custom Interactive Cursor -->
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-outline" id="cursorOutline"></div>
 
-    <!-- Background Noise & Ambient Glow Gradients -->
+    <!-- Background Noise & Interactive Particle Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="ambient-glow glow-3"></div>
@@ -51,6 +68,10 @@
             </nav>
 
             <div class="nav-actions">
+                <button class="sound-toggle-btn active" id="soundToggleBtn" aria-label="Toggle Sound Effects">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    <span>Sound <span class="sound-status">ON</span></span>
+                </button>
                 <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
                 <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
                     <span class="bar"></span>
@@ -69,7 +90,7 @@
                 <div class="hero-content">
                     <div class="status-badge">
                         <span class="pulse-indicator"></span>
-                        <span>Available for Freelance &amp; Full-time Roles</span>
+                        <span>Available for Freelance &amp; 24h Express Delivery</span>
                     </div>
 
                     <h1 class="hero-title">
@@ -307,14 +328,20 @@
                         <h2 class="section-title">Selected Projects &amp; Case Studies</h2>
                     </div>
 
-                    <!-- Filter Controls -->
-                    <div class="filter-buttons" id="filterContainer">
-                        <button class="filter-btn active" data-filter="all">All Projects</button>
-                        <button class="filter-btn" data-filter="branding">Branding</button>
-                        <button class="filter-btn" data-filter="uiux">UI/UX &amp; Web</button>
-                        <button class="filter-btn" data-filter="packaging">Packaging</button>
-                        <button class="filter-btn" data-filter="backend">Node.js Backends</button>
-                        <button class="filter-btn" data-filter="marketing">Social &amp; Ads</button>
+                    <!-- Filter Controls & Search Input -->
+                    <div class="filter-controls-wrapper">
+                        <div class="portfolio-search-box">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="portfolioSearchInput" placeholder="Search projects (e.g. Figma, Node, Brand)..." aria-label="Search portfolio projects">
+                        </div>
+                        <div class="filter-buttons" id="filterContainer">
+                            <button class="filter-btn active" data-filter="all">All Projects</button>
+                            <button class="filter-btn" data-filter="branding">Branding</button>
+                            <button class="filter-btn" data-filter="uiux">UI/UX &amp; Web</button>
+                            <button class="filter-btn" data-filter="packaging">Packaging</button>
+                            <button class="filter-btn" data-filter="backend">Node.js Backends</button>
+                            <button class="filter-btn" data-filter="marketing">Social &amp; Ads</button>
+                        </div>
                     </div>
                 </div>
 
@@ -327,6 +354,7 @@
                             <div class="project-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-id="1">View Case Study</button>
                             </div>
+                            <span class="project-speed-badge">⚡ 24h Express</span>
                         </div>
                         <div class="project-info">
                             <div class="project-category">Brand Identity &amp; Print</div>
@@ -347,6 +375,7 @@
                             <div class="project-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-id="2">View Case Study</button>
                             </div>
+                            <span class="project-speed-badge">⚡ 18h Blitz</span>
                         </div>
                         <div class="project-info">
                             <div class="project-category">UI/UX &amp; Product Design</div>
@@ -367,6 +396,7 @@
                             <div class="project-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-id="3">View Case Study</button>
                             </div>
+                            <span class="project-speed-badge">⚡ 12h Delivery</span>
                         </div>
                         <div class="project-info">
                             <div class="project-category">Packaging &amp; 3D Render</div>
@@ -387,6 +417,7 @@
                             <div class="project-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-id="4">View Case Study</button>
                             </div>
+                            <span class="project-speed-badge">⚡ 24h Build</span>
                         </div>
                         <div class="project-info">
                             <div class="project-category">Node.js &amp; Architecture</div>
@@ -408,6 +439,7 @@
                             <div class="project-overlay">
                                 <button class="btn btn-sm btn-light open-modal-btn" data-id="5">View Case Study</button>
                             </div>
+                            <span class="project-speed-badge">⚡ 16h Campaign</span>
                         </div>
                         <div class="project-info">
                             <div class="project-category">Social Media &amp; Advertising</div>
@@ -571,7 +603,7 @@
                     <span class="section-tag">What I Offer</span>
                     <h2 class="section-title">End-to-End Creative &amp; Technical Services</h2>
                     <p class="section-desc">
-                        Providing comprehensive digital solutions ranging from high-converting brand identities to production-ready Node.js systems.
+                        Providing comprehensive digital solutions ranging from high-converting brand identities to production-ready Node.js systems with express 1-day turnaround capability.
                     </p>
                 </div>
 
@@ -620,6 +652,54 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Interactive 24-Hour Project Delivery Estimator Widget -->
+                <div class="estimator-calculator-card" id="estimatorCalculator">
+                    <div class="calc-header">
+                        <div class="calc-badge">⚡ 24h Express Delivery Tool</div>
+                        <h3 class="calc-title">Instant 1-Day Turnaround &amp; Cost Estimator</h3>
+                        <p class="calc-desc">Configure your urgent project requirements to view estimated delivery speed (≤ 24 hours guaranteed) and pricing range.</p>
+                    </div>
+
+                    <div class="calc-grid">
+                        <div class="calc-group">
+                            <label for="calcProjectType">Project Type</label>
+                            <select id="calcProjectType" class="calc-select">
+                                <option value="branding">Brand Identity &amp; Logo Suite</option>
+                                <option value="uiux">UI/UX Figma Dashboard / App</option>
+                                <option value="nodejs">Node.js Express REST API Backend</option>
+                                <option value="social">Social Media Ads &amp; Campaign</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-group">
+                            <label for="calcUrgency">Delivery Speed Tier</label>
+                            <select id="calcUrgency" class="calc-select">
+                                <option value="standard">Standard Sprint (≤ 24 Hours)</option>
+                                <option value="express">Express Blitz (12 — 18 Hours)</option>
+                                <option value="hyper">Hyper Emergency (6 — 12 Hours)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-result-box">
+                            <div class="result-item">
+                                <span class="result-label">Turnaround Time</span>
+                                <span class="result-value" id="calcOutputHours">≤ 24 Hours</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Estimated Range</span>
+                                <span class="result-value accent-price" id="calcOutputCost">$400 — $800</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-footer">
+                        <button class="btn btn-primary" id="calcApplyBtn">
+                            <span>Apply Selection to Inquiry Form</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -666,7 +746,7 @@
                     <div class="review-card">
                         <div class="review-stars">★★★★★</div>
                         <p class="review-quote">
-                            "Saad designed our brand identity and built our backend API from the ground up. He understood both the business goals and the aesthetic demands effortlessly. 10/10 recommendation!"
+                            "Saad designed our brand identity and built our backend API from the ground up under an urgent 24-hour launch window. He understood both the business goals and aesthetic demands effortlessly."
                         </p>
                         <div class="reviewer-meta">
                             <div class="reviewer-avatar">EL</div>
@@ -688,7 +768,7 @@
                         <span class="section-tag">Let's Build Something Exceptional</span>
                         <h2 class="contact-headline">Have a project in mind? Let's discuss.</h2>
                         <p class="contact-sub">
-                            Whether you need an iconic visual identity, UI/UX product overhaul, or a rock-solid Node.js backend infrastructure, I am ready to collaborate.
+                            Whether you need an iconic visual identity, UI/UX product overhaul, or a rock-solid Node.js backend infrastructure, I am ready to collaborate. Guaranteed response within 2-4 hours.
                         </p>
 
                         <div class="contact-cards">
@@ -708,19 +788,19 @@
                                 </div>
                                 <div>
                                     <span class="contact-label">Availability &amp; Location</span>
-                                    <span class="contact-value">Available for Remote / Hybrid Work (UTC+5)</span>
+                                    <span class="contact-value">Remote / Hybrid (UTC+5) | 24h Express Sprints</span>
                                 </div>
                             </div>
 
-                            <div class="contact-method-card">
-                                <div class="contact-method-icon">
+                            <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                                <div class="contact-method-icon" style="color: #10b981;">
                                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 </div>
                                 <div>
-                                    <span class="contact-label">WhatsApp &amp; Direct Line</span>
-                                    <span class="contact-value">+92 (300) 000-0000 (Available upon message)</span>
+                                    <span class="contact-label">WhatsApp Direct</span>
+                                    <span class="contact-value">+92 (300) 000-0000 (Instant Chat)</span>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <!-- Social Handles -->
@@ -802,7 +882,7 @@
                     <span class="logo-text">Saad<span class="accent-dot">.</span></span>
                 </a>
                 <p class="footer-copy">
-                    &copy; <span id="currentYear">2026</span> M Saad. 3+ Years Experience in Graphic Design &amp; Node.js Engineering. Crafted with high-contrast precision.
+                    &copy; <span id="currentYear">2026</span> M Saad. 3+ Years Experience in Graphic Design &amp; Node.js Engineering. 24h Express Delivery Options.
                 </p>
             </div>
             <div class="footer-right">
